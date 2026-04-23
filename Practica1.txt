@@ -34,3 +34,294 @@ Sirven para navegadores, buscadores y otros servicios.En HTML se especifican den
 usando la etiqueta <meta>
 
 Ejercicio 2: 
+
+2.a)
+<!-- Código controlado el día 12/08/2009--> Es un comentario, puede ir en cualquier parte del documento
+
+2.b)
+<div id="bloque1">Contenido del bloque1</div> Los div sirven como contenedores de bloque, se utiliza en el body, agrupando elementos html para poder despues utilizar estilos css 
+en ellos. Tambien vemos que se utilizan id para identificarlos.
+
+2.c)
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32"
+longdesc="detalles.htm" /> Se usa en el body, basicamente es una imagen donde se utiliza src que es para poner de donde quiero poner esa imagen, el alt que sirve para describir
+su contenido cuando no carga, el id para identificarla, width y height para darle altura y ancho.
+
+2.d)
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " />
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" /> Se utiliza en el head, sirven como metadatos, la primer parte define palabras clave relacionadas con la página.
+la segunda parte indica una fecha de vencimiento del documento.
+
+2.e)
+<a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8"
+rel="help">Resumen HTML </a> Esta se utiliza en el body, sirve para crear un enlace (hipervínculo) a otra página.
+
+2.f)
+<table width="200" summary="Datos correspondientes al ejercicio vencido">
+<caption align="top"> Título </caption>
+<tr>
+<th scope="col">&nbsp;</th>
+<th scope="col">A</th>
+<th scope="col">B</th>
+<th scope="col">C</th>
+</tr>
+<tr>
+<th scope="row">1º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<th scope="row">2º</th>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>    Se utiliza tambien en el body y basicamente es una tabla
+
+Ejercicio 3:
+
+3.a) <a href="http://www.google.com.ar">Click aquí para ir a Google</a>   (Te lleva directamente a google)         
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a> (Te lleva a google pero abriendo una pestaña nueva)
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">    
+<a href="#">Click aquí para ir a Google</a> (No pasa nada al tocar el hipervinculo)
+<a href="#arriba">Click aquí para volver arriba</a> (Te devuelve a la posicion donde este el id arriba)
+<a name="arriba" id="arriba"></a> 
+
+3.b)
+<p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p> (Te lleva a google tocando en Click Aqui)
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p> (Te lleva a google tocando en imagen 1)
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="ima (Te lleva a google tocando en cualquier parte de imagen o click aqui)
+gen1" />Click aquí</a></p>
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a (Te lleva a google tanto tocando en imagen1 o en click aqui)
+href="http://www.google.com.ar">Click aquí</a></p>
+
+3.c)
+<ul>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li>
+</ul> (Te hace una lista desordenada)
+
+<ol>
+<li>xxx</li>
+<li>yyy</li>
+<li>zzz</li> 
+</ol> (Te hace una lista ordenada)
+
+<ol>
+<li>xxx</li>
+</ol>
+<ol>
+<li value="2">yyy</li>
+</ol>
+<ol>
+<li
+value="3">zzz</li>
+</ol> (Te hace una lista ordenada espaciada verticalmente)
+
+<blockquote>
+<p>1. xxx<br />
+2. yyy<br />
+3. zzz</p>
+</blockquote> (Es una lista hecha de una forma no convencional, es decir tipo parrafo)
+
+3.d)
+<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table> (Es una tabla con dos columnas)
+
+<table border="1" width="300">
+<tr>
+<td><div align="center"><strong>Colum
+na1</strong></div></td>
+<td><div align="center"><strong>Columna
+2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table> (Es una tabla que utiliza strongs que no tienen funcion alguna y ademas centra el texto de las Columnas)
+
+3.e)
+<table width="200">
+<caption>
+Título
+</caption>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">
+&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table> (Es una tabla con Celdas vacias de un color especifiico y que no tiene bordes, solo un titulo)
+
+<table width="200">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table> (Es la misma tabla)
+
+3.f)
+<table width="200">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table> (Es una tabla similar a las anteriores pero que une dos celdas verticalmente)
+
+<table width="200">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"
+bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table> (Es una tabla similar a las anteriores pero que une dos celdas horizontalmente)
+
+3.g)
+<table width="200" border="1">
+<tr>
+<td colspan="3"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table> (Es una tabla similar a la anterior con celdas unidas verticalmente pero que no tiene colores y tiene bordes)
+
+<table width="200" border="1" cellpadding="0"
+cellspacing="0">
+<tr>
+<td colspan="2"><div
+align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td width="50%">&nbsp;</td>
+</tr>
+</table> (Es una tabla igual pero el borde se ve mucho más estetico)
+
+3.h)
+<form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form> (Se utiliza un formulario para la el ingreso a una cuenta con usuario y clave)
+
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form> (Nuevamente un login pero los input estan sueltos y no como en una caja)
+
+<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="p
+ost" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value=
+"Enviar" />
+</form> (Lo mismo pero quizas el más estetico de los tres)
+
+3.i)
+<label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label> (Es un boton que posee un logo)
+
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label> (Es un boton que contiene un texto)
+
+3.j)
+<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p> (Da casillas de opcion para poder elegir entre X e Y)
+
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br />
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p> (Es lo mismo nada más que se pueden seleccionar las dos casillas al mismo tiempo)
+
+3.k)
+<select name="lista">
+<optgroup label="Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label="Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select> (Es un listado que divide en dos Casos donde podemos elegir alguna opcion y se abre tocandolo)
+
+<select name="lista[]" multiple="multiple">
+<optgroup label=" Caso 1">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+<optgroup label=" Caso 2">
+<option>Mayo</option>
+<option>Junio</option>
+</optgroup>
+</select> (Es el mismo listado nada más que no se abre tocandolo sino que se selecciona directamente desplazandose con una barrita)

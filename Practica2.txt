@@ -1,0 +1,326 @@
+Ejercicio 1:
+
+1. ¿Qué es CSS y para qué se usa?
+
+CSS (Cascading Style Sheets) es un lenguaje de estilos que se utiliza para definir la apariencia visual de un documento HTML y se 
+usa para controlar cómo se ven los elementos de una página web
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+
+Partes de una regla:
+Selector: Indica a qué elemento HTML se aplica el estilo. Ej: p, h1, .clase, #id
+Declaración: Está dentro de {} y define el estilo.
+Propiedad: Qué aspecto se modifica. Ej: color, font-size, margin
+Valor: Cómo se modifica la propiedad. Ej: red, 16px, center
+
+3. ¿Cuáles son las tres formas de dar estilo a un documento?
+En línea (inline): Se aplica directamente en la etiqueta HTML con el atributo style.
+Interno (internal o embebido): Se escribe dentro de la etiqueta <style> en el <head> del documento.
+Externo (external): Se usa un archivo .css separado y se vincula con <link>.
+
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique cada uno.
+Selector de elemento (etiqueta): Aplica a todas las etiquetas de ese tipo.
+Ej: p {
+  color: blue;
+}
+
+Selector de clase (.): Aplica a elementos con una clase específica.
+Ej: .destacado {
+  color: red;
+}
+
+Selector de id (#): Aplica a un elemento con un id único.
+Ej: #titulo {
+  font-size: 24px;
+}
+
+Selector universal (*): Aplica a todos los elementos.
+Ej: * {
+  margin: 0;
+}
+
+Selector descendente: Aplica a elementos dentro de otros.
+Ej: div p {
+  color: green;
+}
+
+Selector de hijo directo (>): Aplica solo a hijos directos.
+Ej: div > p {
+  color: orange;
+}
+
+Selector de atributo: Aplica según atributos.
+Ej: input[type="text"] {
+  border: 1px solid black;
+}
+
+5. ¿Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+Una pseudo-clase en CSS es una palabra clave que se agrega a un selector para definir un estado especial de un elemento.
+Las más utilizadas son: :link (Enlace no visitado), :visited (Enlace ya visitado), :hover (Cuando el mouse pasa por encima)
+:active (Cuando el enlace está siendo clickeado)
+
+6. ¿Qué es la herencia?
+La herencia es el mecanismo por el cual algunas propiedades de estilo se transmiten automáticamente 
+de un elemento padre a sus elementos hijos.
+
+7. ¿En qué consiste el proceso denominado cascada?
+La cascada es el mecanismo que utiliza CSS para determinar qué estilo se aplica 
+a un elemento cuando existen múltiples reglas que podrían afectarlo.
+Se basa en: Prioridad, especificidad, orden de aparición.
+
+Ejercicio 2:
+
+p#normal {
+font-family: arial,helvetica;
+font-size: 11px;
+font-weight: bold; (A todos los parrafos con id #normal se les aplicara esos atributos a las letras)
+}
+*#destacado {
+border-style: solid;
+border-color: blue;
+border-width: 2px; (a cualquier elemento con id #destacado se le cambia el borde a esa forma)
+}
+#distinto {
+background-color: #9EC7EB;
+color: red; (A los elementos con id #distinto se les aplica esos cambios en los colores)
+}
+<p id="normal">Este es un párrafo</p>
+<p id="destacado">Este es otro párrafo</p>
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>
+<p id="distinto">Este es el último párrafo</p>
+
+Ejercicio 3: 
+
+p.quitar {
+color: red;
+} (A los p con clase quitar se les asigna el color rojo)
+*.desarrollo {
+font-size: 8px;
+} (A todos los elementos con clase destacado se les aplica un incremento en la letra de 8px)
+.importante {
+font-size: 20px;
+} (A los elementos de clase importante se les aplica incremento en la letra de 20px)
+<p class="desarrollo">
+En este primer párrafo trataremos lo siguiente:
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="quitar">
+Este párrafo debe ser quitado de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p >
+En este otro párrafo trataremos otro tema:<br />
+xxxxxxxxxxxxxxxxxxxxxxxxx
+</p>
+<p class="importante">
+Y este es el párrafo más importante de la obra…
+<br />xxxxxxxxxxxxxxxxxxxxxxxxx
+</ p>
+<h1 class="quitar">Este encabezado también debe ser quitado de la obra</h1>
+<p class="quitar importante">Se pueden aplicar varias clases a la vez</p>
+
+Ejercicio 4:
+
+Dadas las siguientes declaraciones:
+* {color:green; }
+a:link {color:gray }
+a:visited{color:blue }
+a:hover {color:fuchsia }
+a:active {color:red }
+p {font-family: arial,helvetica;font-size: 10px;color:black; }
+.contenido{font-size: 14px;font-weight: bold; }
+
+Analizar los siguientes códigos y comparar sus efectos. Explicar:
+
+1- <body>
+<p class="contenido" style="font-weight: normal;">
+Este es un texto ...............</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un
+enlace</a></td>
+</tr>
+</table>
+</body> (Mantiene el color de contenido en gris, Esta es una tabla en verde y al link le da un color azulado)
+
+2- <p> Este es un texto................</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con
+un enlace</a></td>
+</tr>
+</table> (Queda igual nada más que achica la letra en todos los elementos)
+
+Ejercicio 5:
+En cada caso, declarar una regla CSS que produzca el siguiente efecto:
+
+1. Los textos enfatizados dentro de cualquier título deben ser rojos.
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  color: red;
+}
+
+2. Cualquier elemento que tenga asignado el atributo "href" y que esté dentro de cualquier párrafo que a
+su vez esté dentro de un bloque debe ser color negro.
+div p [href] {
+  color: black;
+}
+
+3. El texto de las listas no ordenadas que estén dentro del bloque identificado como “ultimo” debe ser
+amarillo pero si es un enlace a otra página debe ser azul.
+#ultimo ul {
+  color: yellow;
+}
+
+#ultimo ul a {
+  color: blue;
+}
+
+4. Los elementos identificados como “importante” dentro de cualquier bloque deben ser verdes, pero si
+están dentro de un título deben ser rojos.
+div #importante {
+  color: green;
+}
+
+h1 #importante,
+h2 #importante,
+h3 #importante,
+h4 #importante,
+h5 #importante,
+h6 #importante {
+  color: red;
+}
+
+5. Todos los elementos h1 que especifique el atributo title, cualquiera que sea su valor, deben ser azules.
+h1[title] {
+  color: blue;
+}
+
+6. El color de los enlaces en las listas ordenadas debe ser azul para los enlaces aún no visitados, y violeta
+para los ya visitados y, además, no deben aparecer subrayados.
+ol a:link {
+  color: blue;
+  text-decoration: none;
+}
+
+ol a:visited {
+  color: violet;
+  text-decoration: none;
+}
+
+Ejercicio 6:
+
+El código principal.html quedaría de la siguiente forma con las modificaciones requeridas:
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REChtml401-19991224/loose.dtd">
+<HTML lang=es xmlns="http://www.w3.org/1999/xhtml">
+<HEAD><TITLE>Página Principal</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1"></META>
+<style>
+body{
+font-family:"Times New Roman", Times, serif;
+color: #000000;
+margin: 0px;
+padding: 0px;
+background
+-color: #FFFFCC;
+}
+a:link, a:visited{
+color: #660099;
+text
+-decoration: none;
+}
+a:hover{
+background
+-color: #dddddd;
+}
+h1, h2, h3{
+font
+-family: Verdana, Arial, Helvetica, sans
+-serif;
+margin: 0px;
+padding: 0px; }
+h1{
+font
+-size: 140%;
+color: #006666; }
+h2{
+font
+-size: 120%;
+color: #990000; }
+h3{
+font
+-size: 100%;
+color: #000099; }
+ul.vineta{
+list
+-style
+-type: square;
+color:#000000; }
+#encabezado{
+background
+-color: #CCFFCC;
+margin: 5px;
+padding: 0px 0px 10px 10px; }
+#menu{
+background
+-color: #FFCC99;
+margin: 0 79% 0 0;
+padding: 20px;
+font
+-size: 90%;
+}
+#contenido{
+float:right;
+width: 75%;
+margin: 0;
+padding: 0 3% 0 0; }
+.resaltado{
+color: #ff0000; }
+#pie{
+clear:both;
+text
+-align: center;
+padding: 10px 10px 10px 10px; }
+.estilopie{
+border: 1px solid #006666;
+font
+-size: 75%;
+color: #006666;
+}
+</style>
+</HEAD>
+<BODY>
+<DIV id=titulo><H1>ASIGNATURA ELECTIVA</H1></DIV>
+<DIV id=contenido>
+<H2>Contenido</H2>
+<p>En esta asignatura ...........................<BR></p>
+<P>El objetivo fundamental ..................</P>
+<P>etc., etc., ...........................................</P>
+<P>etc., etc., ...........................................</P>
+<P>Adem&aacute;s, ...........................................</P>
+<P>etc., etc., ...........................................</P>
+<P class="resaltado">Pero, lo más importante es ..............................</P>
+<P class="resaltado">etc., etc., ...........................................</P>
+<P>Y, entonces, podemos continuar con ..................</P>
+<P>etc., etc., ...........................................</P>
+<P>&nbsp;</P>
+</DIV>
+<DIV id=menu class=navBar>
+<H3>Enlaces</H3>
+<UL>
+<LI><A href="http://www.e-style.com.ar/moodle" target=_blank>Curso Actual</A>
+<LI><A href="http://www.e-style.com.ar/logica" target=_blank>Curso anterior</A> </LI>
+<LI><A href="http://www.e-style.com.ar/ntedu/consultas.htm" target=_blank>Contacto</A></LI>
+</UL>
+</DIV>
+<DIV id=pie>Ingeniería en Sistemas de Información - Universidad Tecnológica Nacional Rosario</DIV>
+<p>&nbsp;</p>
+</BODY>
+</HTML>
+
